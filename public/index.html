@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Discussion Portal</title>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+    <!-- header -->
+    <header class="header" style="--bs-primary-rgb:0,128,128;">
+        Discussion Portal
+    </header>
+
+    <!-- container -->
+    <div class="container">
+        <!--column1  -->
+        <div class="discussion_container">
+            <!-- searchContainer -->
+            <div class="extraOptionsContainer">
+                <div class="search_container">
+                    <button type="button" id="newQues" class="">New Question form</button>
+                    <input type="text" class="" name="search" id="search" placeholder="search question...">
+                </div>
+                <div class="sortBy_container">
+                    <select name="sortBy" class="sortBy" id="sortBy">
+                        <option value="0">--Sort By--</option>
+                        <option value="1">Date Asc</option>
+                        <option value="2">Date Desc</option>
+                        <option value="3">Subject Asc</option>
+                        <option value="4">Subject Desc</option>
+                        <option value="5">Username Asc</option>
+                        <option value="6">Username Desc</option>
+                        <option value="7">Favourite Asc</option>
+                        <option value="8">Favourite Desc</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- questionContainer -->
+            <div id="questionContainer" class="">
+            </div>
+        </div>
+
+
+        <!-- column2 -->
+        <div class="interaction_container">
+
+            <!--Welcome to discussion -->
+            <form id="askQuestion" class="">
+                <p class="textSize1">Welcome to Discussion Portal !</p>
+                <p class="textSize3">Enter a subject and question to get started</p>
+                <input type="text" class="" name="username" id="username" placeholder="User Name" required>
+                <input type="text" class="" name="subject" id="subject" placeholder="Subject" required>
+                <textarea name="question" class="" id="question" cols="30" rows="10" placeholder="Question"
+                    required></textarea>
+                <button type="submit" id="q-submit" class="interaction_buttons">Submit</button>
+            </form>
+
+            <!-- analytic -->
+            <div class="analytics_container" id="analytics_container">
+                <p class="textSize4">Analytics</p>
+                <div class="analytics_Search_container">
+                    <input type="text" class="'search_username" id="search_username"placeholder="Search User"/>
+                    <button id="search_user" >Search</button>
+                </div>
+                <div class="username_Container">
+                    <select name="user" id="select_username">
+                        <option value="">--select username--</option>  
+                    </select>
+                </div>
+                <div class="analysis" id="analysis">
+
+                </div>
+
+            </div>
+
+            <!-- Question -->
+            <div id="onQuestion" class="d-none">
+                <p class="textSize4">Question</p>
+                <div class="onQuestion">
+                    <p id="sub" class="textSize2"></p>
+                    <p id="ques" class="textSize3"></p>
+                </div>
+                <button type="button" id="resolve" class="interaction_buttons">Resolve</button>
+            </div>
+
+
+            <!-- Response -->
+            <div id="responses" class="textSize4 d-none">
+                <p class="">Response</p>
+            </div>
+
+
+            <!-- add a response -->
+            <form id="addResponse" class="d-none">
+                <p class="textSize4">Add a Response</p>
+                <input type="text" name="d-id" class="d-none">
+                <input type="text" class="" name="name" placeholder="Enter Name" required />
+                <textarea name="comment" class="" cols="30" rows="10" placeholder="Enter Comment" required></textarea>
+                <button type="submit" class="interaction_buttons">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    </div>
+    
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
